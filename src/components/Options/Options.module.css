@@ -1,0 +1,13 @@
+.options_wrap button:not(:last-child) {
+  margin-right: 15px;
+}
+
+.options_wrap button {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.reset {
+  background-color: #f45252;
+  color: #fff;
+}
