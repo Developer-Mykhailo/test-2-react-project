@@ -1,4 +1,5 @@
 import s from "./Options.module.css";
+import { clsx } from "clsx";
 
 const Options = ({ handleClilck, resetFeedbsck, total }) => {
   return (
@@ -7,11 +8,12 @@ const Options = ({ handleClilck, resetFeedbsck, total }) => {
       <button onClick={() => handleClilck("neutral")}>Neutral</button>
       <button onClick={() => handleClilck("bad")}>Bad</button>
 
-      {total > 0 && (
-        <button className={s.reset} onClick={resetFeedbsck}>
-          Reset
-        </button>
-      )}
+      <button
+        className={clsx(s.reset, { [s.show]: total > 0 })}
+        onClick={resetFeedbsck}
+      >
+        Reset
+      </button>
     </div>
   );
 };
