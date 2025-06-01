@@ -1,3 +1,7 @@
+.options_wrap {
+  margin-bottom: 20px;
+}
+
 .options_wrap button:not(:last-child) {
   margin-right: 15px;
 }
